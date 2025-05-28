@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuhusu Sisi | Jordan Health Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('About.png');
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+       header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: palegoldenrod;
+    margin-top: 5px;
+    opacity: 0;  /* Start invisible */
+    transform: translateY(-100%); /* Position it above */
+    animation: slideDown 1.5s ease-in-out forwards; /* Apply animation */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        
+       nav ul {
+           display: flex;
+           gap: 20px;
+           list-style: none;
+           padding: 0;
+           position: relative; /* Ruhusu kuhamisha kwa left */
+           left: -25px; /* Sogeza upande wa kushoto */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+
+/* ✅ Media Query kwa Simu */
+        @media screen and (max-width: 768px) {
+        nav ul {
+        flex-direction: column; /* Itaweka menu kwa wima badala ya sambamba */
+        gap: 10px;
+        text-align: center;
+        }
+}
+        h2, h4, h5 {
+            font-size: 24px;
+            color: palegoldenrod;
+            text-decoration: underline;
+        }
+        h3, p {
+            font-size: 24px;
+        }
+        footer p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="font-size: 22px; margin: 0; color: black;">JORDAN HEALTH SOLUTION</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="About">
+    <div class="container">
+        <h2 style="color: darkgreen;"><b>TUNACHOKIFANYA</b></h2>
+        <h3>Lengo letu kuu ni kuhakikisha kila mtu anatumia chakula kama dawa na sio dawa kama chakula.</h3>
+
+        <h4 style="color: darkgreen;"><b>WALENGWA WETU</b></h4>
+        <p><b>Kila mtu mwenye uhitaji wa kuitunza afya yake kwa kutumia chakula lishe. Watu wanaotaka kuimarisha kinga ya mwili, kuboresha mfumo wa mmeng’enyo wa chakula, kuzuia magonjwa kupitia lishe sahihi, na kuhakikisha mwili unapata virutubisho vinavyohitajika kwa afya njema na maisha marefu.</b></p>
+
+        <h5 style="color: darkgreen;"><b>TUNACHOTAFUTA</b></h5>
+        <p><b>Tunajitahidi kutoa vyakula vya lishe vinavyosaidia kuboresha afya na mfumo mzima wa mwili. Malengo yetu ni kuhakikisha kila mtu anapata virutubisho sahihi vinavyosaidia mwili kufanya kazi kwa ufanisi bila kutegemea dawa za kemikali.</b></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Jordan Health. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

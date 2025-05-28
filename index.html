@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        
+
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: palegoldenrod;
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    background-color: palegoldenrod;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000; /* Inasaidia header ibaki juu ya kila kitu */
+}
+
+
+.main-heading {
+    display: flex;
+    justify-content: center; /* Itaweka heading katikati */
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    width: 100%; /* Hakikisha inachukua nafasi yote */
+    margin-top: -20px;
+    font-family:monospace;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 35px;
+   
+}
+
+.nav-menu {
+    margin-top: 15px;
+    opacity: 0; /* Itaanza ikiwa imejificha */
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-52%);
+    padding: 15px;
+    border-radius: 5px;
+    width: auto;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.nav-menu ul {
+    display: flex; /* Panga menu horizontally */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+.nav-menu ul li {
+    padding: 10px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Onyesha menu ikiwa active */
+.nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: palegoldenrod;
+    padding: 20px;
+    padding-bottom: 40px; /* Ongeza nafasi chini */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+    
+        .hero {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 30px; 
+            margin-top: 0;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+    
+        .footer {
+            background-color: palegoldenrod;
+            padding: 50px;
+            font-weight: bold;
+            margin-top: 50px;
+            
+        
+        }
+       
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 20px;
+            padding: 5px;
+            margin-top: 0; 
+        }
+
+        .box {
+            width: 150px;
+            min-height:50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -10px;
+        }
+        .box {
+    background-color: whitesmoke;
+    color: #333;
+    padding: 3px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.box:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3); 
+}
+
+
+.box:active {
+    transform: scale(1.2); 
+}
+.box {
+  margin-left: -10px; /* Inasogeza viboksi 20px kuelekea kushoto */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:palegoldenrod; 
+    padding: 20px;
+    font-size: 18px;
+
+}
+
+.logo img {
+    width: 120px; /* Rekebisha ukubwa wa logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 110px;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: gold; /* Badilisha rangi unapo-hover */
+}
+
+.contact-btn {
+    background-color: green;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: orange;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: relative;
+        top: 60px;
+        right: 20px;
+        background: palegoldenrod;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Hii itafanya "Fahamu Zaidi" ishuke chini moja kwa moja */
+    padding: 20px;
+    border: 2px solid #000;
+    width: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 50px; /*Hakikisha kiboksi kina urefu wa kutosha */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column; /* Viboksi vitapangwa juu chini badala ya kando kando */
+        align-items: center; /* Hakikisha viko katikati */
+        gap: 15px; /* Ongeza nafasi kidogo kati yao */
+    }
+
+    .box {
+        width: 80%; /* Viboksi vitachukua asilimia kubwa ya nafasi kwenye simu */
+    }
+}
+
+}
+.location-on {
+    color: red; /* Inafanya icon iwe na rangi nyekundu */
+}
+.contact-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-info a:hover {
+    color: red; /* Badilisha rangi unapo-hover */
+    transform: scale(1.1); /* Ongeza ukubwa kidogo unapo-hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px; /* Hakikisha icons zipo chini */
+    padding-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Icons zikae katikati */
+    gap: 15px;
+    margin-top: 5px; /* Ongeza nafasi ndogo juu */
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: black;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+                                                                                                                                                                                                                        
+    </style>
+</head>
+<body>
+
+    
+    <header>
+    <h1 class="main-heading">JORDAN HEALTH SOLUTION</h1>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+    </div>
+    <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="#index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
+
+    <section class="hero">
+        <p style="font-size: 25px;"><b>Afya ni utajiri namba moja katika maisha yako.</b></p>
+        <p style="font-size: 24px;">Kazi yetu ni kuhakikisha unakuwa na Afya bora wakati wote kwa kutumia chakula lishe.<br>Chagua jinsia hapo chini kisha utachagua ni ugonjwa gani unahitaji <br>kuutatua au kuuzuia.</p>
+    </section>
+
+  <section class="hero">
+    <div class="wrapper">
+        <div class="box">
+            <div onclick="window.location.href='Second.html'">
+                FAHAMU KUHUSU JINSIA YA KIUME
+            </div> 
+        </div>
+         <div class="box">
+            <div onclick="window.location.href='Female.html'">
+                FAHAMU KUHUSU JINSIA YA KIKE
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <h1 style="text-decoration: underline;font-size: 25px;text-align: center;">JORDAN HEALTH SOLUTION</h1>
+        
+        <p style="font-size: 24px;text-align: center;color: rgb(57, 57, 58);">Tunatoa elimu ya Afya na tiba kwa kutumia chakula lishe kwa kushirikiana na wabia wetu <br>kutoka marekani.<br>Tupigie tutakuhudumia wakati wowote ule na Ujikinge na upone kabisa.</p> 
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="contact-section">
+    <h2 style="text-decoration: underline;">Contact</h2>
+    <p><a href="tel:+255687770155" style="color: rgb(57, 57, 58); text-decoration: none; font-size: 18px;">
+        📞 <b>+255 687 770 155‬</b></a></p>
+    
+    <p><a href="mailto:josephnyalusi73@gmail.com" style="color: rgb(57, 57, 58); text-decoration: none; font-size: 18px;">
+        📩 <b>josephnyalusi73@gmail.com</b></a></p>
+    
+    <p style="color: #39393A; font-size: 16px;">
+        <strong><span class="material-icons" style="color: red;">location_on</span> Dodoma - Majengo Sokoni</strong><br>
+        <strong><span class="material-icons" style="color: red;">location_on</span> Dar-es-Salaam</strong><br>
+        <strong><span class="material-icons" style="color: red;">location_on</span> Butembo - DRC Congo</strong>
+    </p>
+</div>
+<hr>
+  <footer>
+    <div class="footer-bottom">
+        <p style="color: #333;font-size: 16px; padding-top: 20px; background-color: palegoldenrod; text-align: center;">
+            © 2025 Jordan Health. All Rights Reserved.
+        </p>
+
+        <!-- Social Media Icons (Ziko ndani ya footer-bottom) -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/jordan_health_solution" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/+255687770155" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/Jordan_health_solution" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("navMenu");
+        menu.classList.toggle("active"); // Inafungua au kufunga menu
+        console.log("Hamburger menu imebonyezwa!"); // Hii itaonyesha iwapo imefanya kazi
+    }
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

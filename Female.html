@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #e0f7fa;
+}
+
+/* Kubadilisha max-width ili iweze kuenea vizuri */
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Mpangilio wa viboksi */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ili viboksi vijipange vizuri kwenye simu */
+    margin-bottom: 30px;
+}
+
+/* Viboksi vya magonjwa */
+.disease-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    height: 130px;
+    justify-content: center;
+}
+
+/* Picha */
+.image {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Maandishi ya ndani */
+.content {
+    flex-grow: 1;
+}
+
+.title {
+    color: darkslategray;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: whitesmoke;
+    color: royalblue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.disease-box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+
+/* Mpangilio wa viboksi vya mwisho */
+.last-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Hakikisha box lina nafasi sawa na mabox mengine */
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+
+/* ✅ Media Query kwa simu */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .disease-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    .last-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+.last-box {
+    flex: 1; /* Hakikisha inafuata muundo wa mabox mengine */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    height: 130px;
+}
+
+/* Hakikisha kiboksi cha mwisho kinabaki sawa kwenye vifaa vyote */
+@media screen and (max-width: 768px) {
+    .last-box {
+        width: 100%;
+        min-height: 130px;
+    }
+}
+
+
+
+
+}
+/* Hakikisha saizi inabaki vile vile kwenye vifaa vyote */
+@media screen and (max-width: 768px) {
+    .last-box {
+        width: 120px;
+        min-height: 80px;
+    }
+}
+
+
+    .location-on {
+    color: red; /* Inafanya icon iwe na rangi nyekundu */
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: red;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 24px; text-align: center;">CHAGUA UGONJWA ULIONAO HAPO CHINI.</h1>
+    <p style="color: black; text-align: center; font-size: 20px;">
+        Karibu sana ni wajibu wetu Kukuhudumia. Angalia ugonjwa unaohitaji kuutibu au kuuzuia, kisha usome kwa makini na utupigie ili upate suluhisho leo.
+    </p>
+
+       <div class="container">
+        <!-- Mstari wa Kwanza -->
+        <div class="row">
+            <div class="disease-box">
+                <img src="Uti.png" alt=" Maambukizi ya Njia ya Mkojo(U.T.I)" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title"> Maambukizi ya Njia ya Mkojo(U.T.I)</h2>
+                    <a href="UTI.html" class="link">Fahamu Zaidi</a>
+                </div>
+            </div>
+
+            <div class="disease-box">
+                <img src="Tumer.png" alt="Uvimbe katika Kizazi" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title">Uvimbe katika Kizazi</h2>
+                    <a href="Tumer.html" class="link">Fahamu Zaidi</a>
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="disease-box">
+                <img src="Fungus.png" alt="Miwasho Sehemu Za Siri" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title">Miwasho Sehemu Za Siri</h2>
+                    <a href="Fungus.html" class="link">Fahamu zaidi</a>
+                </div>
+            </div>
+    
+            <div class="disease-box">
+                    <img src="Pid.png" alt="Kutokwa na Uchafu Sehemu Za siri" class="image" onclick="openModal(this)">
+                    <div class="content">
+                        <h2 class="title">Kutokwa na Uchafu Sehemu Za Siri</h2>
+                        <a href="Pid.html" class="link">Fahamu zaidi</a>
+                    </div>
+                </div>
+            </div>
+          
+       <div class="row">
+            <div class="disease-box">
+                <img src="Smell.png" alt="Harufu Mbaya Sehemu Za Siri" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title">Harufu Mbaya Sehemu Za Siri</h2>
+                    <a href="Smell.html" class="link">Fahamu zaidi</a>
+                </div>
+            </div>
+            
+            <div class="disease-box">
+                <img src="Pain.png" alt="Maumivu wakati wa Tendo la Ndoa" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title">Maumivu wakati wa Tendo la Ndoa</h2>
+                    <a href="Pain.html" class="link">Fahamu zaidi</a>
+                </div>
+            </div>
+       </div>
+            
+
+            <div class="row">
+            <div class="disease-box">
+                <img src="Others.png" alt="Je Una Magonjwa Mengine?" class="image" onclick="openModal(this)">
+                <div class="content">
+                    <h2 class="title">Je Una Magonjwa Mengine?</h2>
+                    <a href="form.html" class="link">Jaza Taarifa Zako</a>
+                </div>
+            </div>
+            </div>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <p><a href="index.html"></a></p>
+    </div>
+    
+   <footer style="background-color: #f4f4f4; padding: 40px 20px; border-top: 2px solid #39393A; font-family: Arial, sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; text-align: left;">
+      
+        <!-- Company Info -->
+        <div style="flex: 1 1 300px; margin-bottom: 20px;text-align: center;">
+            <h2 style="color: #39393A;text-decoration: underline;text-align: center;">JORDAN HEALTH SOLUTION</h2>
+            <p style="color: #39393A; font-size: 16px; line-height: 1.6;">
+                Tunatoa elimu ya afya na tiba kwa kutumia chakula lishe kwa kushirikiana na wabia wetu kutoka Marekani.<br> Tupigie tutakuhudumia wakati wote na ujikinge na upone kabisa.
+            </p>
+        </div>
+      
+        <!-- Contact Info -->
+        <div style="flex: 1 1 200px; margin-bottom: 40px;text-align: start;">
+            <h3 style="color: #39393A; text-decoration: underline;">Contact Us</h3>
+            <p style="color: #39393A; font-size: 16px;">📞 <strong>0687-770-155</strong></p>
+            <p style="color: #39393A; font-size: 16px;">📩 <strong>josephnyalusi73@gmail.com</strong></p>
+            <p style="color: #39393A; font-size: 16px;">
+            <strong><span class="material-icons" style="color: red;">location_on</span> Dodoma - Majengo Sokoni</strong><br>
+            <strong><span class="material-icons" style="color: red;">location_on</span> Dar-es-Salaam</strong><br>
+            <strong><span class="material-icons" style="color: red;">location_on</span> Butembo - DRC Congo</strong>
+            </p>
+      
+    </div>
+    
+    
+    <!-- Footer Bottom -->
+<div style="bottom: 0; width: 100%; text-align: center; padding: 10px 0; background-color: #f4f4f4; color: #999;">
+    <b>&copy; 2025 Jordan Health Solution. All rights reserved.</b>
+</div>
+
+</footer>
+
+      
+</body>
+</html>
+</body>
+
+
+<script>
+function openModal(imgElement) {
+    var modal = document.getElementById("imageModal");
+    var modalImage = document.getElementById("modalImage");
+
+    modalImage.src = imgElement.src;
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+
+</script>
+
+
