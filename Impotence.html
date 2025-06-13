@@ -38,6 +38,33 @@
     color: red;
     transform: scale(1.2);
 }
+
+  .shuhuda-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 2px 8px #ccc;
+    }
+    .shuhuda-img:hover {
+        transform: scale(1.15);
+        box-shadow: 0 4px 16px #888;
+        z-index: 2;
+    }
+    .shuhuda-card {
+        width: 220px;
+        background: #fffbe7;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 2px 8px #ccc;
+        text-align: center;
+        transition: box-shadow 0.3s;
+    }
+    .shuhuda-card:hover {
+        box-shadow: 0 4px 16px #888;
+    }
     </style>
   
 
@@ -83,9 +110,76 @@
     <li style="color: brown;font-size: 18px"><b>Huimarisha Afya ya Tezi dume na mtiririko mzuri wa mkojo, Kusaidia Nguvu za kiume.</b></li>
     <li style="color: brown;font-size: 18px"><b>Husaidia kuongeza hamu ya Tendo la ndoa, Kuboresha uzalishaji wa mbegu za Kiume na kuimarisha mfumo wa homoni.</b></li>
     </ol>
+    <!-- ...existing code... -->
+<hr>
 
+<!-- Sehemu ya Ushuhuda na Picha -->
+<h6 style="font-size: 24px; text-decoration: underline; margin-top: 40px;"><b>Ushuhuda wa Wateja Wetu</b></h6>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-bottom: 30px;">
+    <!-- Shuhuda 1 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda1.jpg" alt="Mteja 1" class="shuhuda-img">
+        <p style="font-size: 15px;">"Nilikuwa na tatizo la nguvu za kiume, baada ya kutumia bidhaa zenu nimepona kabisa. Asanteni sana!"</p>
+        <span style="color: brown;">— Juma, Dar es Salaam</span>
+    </div>
+    <!-- Shuhuda 2 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda2.jpg" alt="Mteja 2" class="shuhuda-img">
+        <p style="font-size: 15px;">"Huduma yenu ni bora na bidhaa ni za asili. Nimefurahia matokeo!"</p>
+        <span style="color: brown;">— Hamisi, Arusha</span>
+    </div>
+    <!-- Shuhuda 3 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda3.jpg" alt="Mteja 3" class="shuhuda-img">
+        <p style="font-size: 15px;">"Nimejirudia na sasa nina furaha kwenye ndoa yangu. Nashukuru Jordan Health."</p>
+        <span style="color: brown;">— Musa, Mwanza</span>
+    </div>
+    <!-- Shuhuda 4 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda4.jpg" alt="Mteja 4" class="shuhuda-img">
+        <p style="font-size: 15px;">"Huduma yenu ni ya haraka na ushauri wenu umenisaidia sana."</p>
+        <span style="color: brown;">— John, Mbeya</span>
+    </div>
+    <!-- Shuhuda 5 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda5.jpg" alt="Mteja 5" class="shuhuda-img">
+        <p style="font-size: 15px;">"Niliogopa kujaribu, lakini sasa najiamini tena. Asanteni kwa kunisaidia."</p>
+        <span style="color: brown;">— Salum, Dodoma</span>
+    </div>
+    <!-- Shuhuda 6 -->
+    <div class="shuhuda-card">
+        <img src="Shuhuda6.jpg" alt="Mteja 6" class="shuhuda-img">
+        <p style="font-size: 15px;">"Nimeona mabadiliko ndani ya wiki mbili tu. Nashauri wengine wasisite kuwasiliana nanyi."</p>
+        <span style="color: brown;">— Peter, Morogoro</span>
+    </div>
+</div>
+<hr>
     <p style="font-size: 18px;margin-left: 38px;color: brown;"><b>💰 Bei:Tsh 289,000/= kwa Package.</b></p>
     <p style="font-size: 18px;margin-left: 38px;color: brown;"><b>🚚Usafiri ni BURE popote Tanzania.</b></p>
+    <!-- Bidhaa Zilizosafirishwa Section -->
+<div style="margin-left: 38px; margin-top: 16px; margin-bottom: 24px;">
+    <h6 style="font-size: 20px; color: black; margin-bottom: 10px;"><b>Baadhi ya Bidhaa Zilizosafirishwa Kwa Wateja Wetu Nchini:</b></h6>
+    <div style="display: flex; flex-wrap: wrap; gap: 18px;">
+        <div style="width: 180px; text-align: center;">
+            <img src="Trans.jpg" alt="Bidhaa Dar es Salaam" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px #ccc;">
+            <p style="font-size: 14px; color: #444; margin-top: 6px;">Babati</p>
+        </div>
+        <div style="width: 180px; text-align: center;">
+            <img src="Trans2.jpg" alt="Bidhaa Arusha" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px #ccc;">
+            <p style="font-size: 14px; color: #444; margin-top: 6px;">Bujumbura</p>
+        </div>
+        <div style="width: 180px; text-align: center;">
+            <img src="Trans3.jpg" alt="Bidhaa Mwanza" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px #ccc;">
+            <p style="font-size: 14px; color: #444; margin-top: 6px;">Bukavu</p>
+        </div>
+       
+    </div>
+    <p style="font-size: 16px; color: black; margin-top: 14px;">
+        <b>Tuna hakikisha bidhaa zinakufikia salama na kwa wakati wowote, popote ulipo Tanzania! Jiunge na mamia ya wateja waliopokea huduma bora kutoka Jordan Health.</b>
+    </p>
+</div>
+<!-- end bidhaa section -->
     <p style="font-size: 18px;margin-left: 38px;color: brown;"><b>☎Wasiliana nasi kwa namba zifuatazo 0687-770-155</b></p>
     <p style="font-size: 18px; margin-left: 38px; color: brown;">
     <b>
